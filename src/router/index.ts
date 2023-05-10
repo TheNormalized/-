@@ -1,12 +1,16 @@
-import { defineStore } from 'pinia';
+import { createRouter } from 'vue-router';
+import { createWebHistory } from 'vue-router';
 
-// useStore 可以是 useUser、useCart 之类的任何东西
-// 第一个参数是应用程序中 store 的唯一 id
-export const useHomeStore = defineStore('home', {
-  // other options...
-  state: () => {
-    return {
-      name: 'zs',
-    };
-  },
+// 组件
+import Login from '../views/components/userLogin.vue';
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/login',
+      component: Login,
+    },
+  ],
 });
+
+export default router;

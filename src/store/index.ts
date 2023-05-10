@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 export const useHomeStore = defineStore('home', {
   state: () => {
     return {
-      name: 'zs',
+      name: 'z32s',
     };
   },
 });
